@@ -9,45 +9,40 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Unit5-06-HTML/sw.js", {
-    scope: "/ICS2O-Unit5-06-HTML/",
+  navigator.serviceWorker.register("/ICS2O-Unit5-08-HTML/sw.js", {
+    scope: "/ICS2O-Unit5-08-HTML/",
   })
 }
 
 /**
- * This function does a multiplication loop.
+ * This function does a division loop.
  */
-function multiplyBy() {
-  // input
-  const firstInteger = parseInt(document.getElementById('first-integer').value)
-	const secondInteger = parseInt(document.getElementById('second-integer').value)
+function myButtonClicked() {
+  const number1 = parseInt(document.getElementById("first-integer").value);
+  const number2 = parseInt(document.getElementById("second-integer").value);
+  var addedNumber = 0;
+  var answer = number1;
+  var remainder = 0;
 
-  // process
-  var addedNumber = 0
-  var answer = 0
-  
-   if (firstInteger > 0 && secondInteger > 0) {
-    while (addedNumber < secondInteger) {
+  if (number1 > 0 && number2 > 0) {
+    while (answer >= number2) {
       addedNumber = addedNumber + 1;
-      answer = answer + firstInteger;
-    }
-  } else if (firstInteger < 0 && secondInteger < 0) {
-    while (addedNumber > secondInteger) {
-      addedNumber = addedNumber - 1;
-      answer = answer - firstInteger;
-    }
-  } else if (firstInteger > 0 && secondInteger < 0) {
-    while (addedNumber > secondInteger) {
-      addedNumber = addedNumber - 1;
-      answer = answer - firstInteger;
-    }
-  } else if (firstInteger < 0 && secondInteger > 0) {
-    while (addedNumber < secondInteger) {
-      addedNumber = addedNumber + 1;
-      answer = answer + firstInteger;
+      answer = answer - number2;
     }
   }
 
-  // output
-  document.getElementById('answer').innerHTML = firstInteger + " x " + addedNumber + " = " + answer;
+  if (answer == 0) {
+    remainder = 0;
+  } else if (answer != 0) {
+    remainder = answer + number2;
+  }
+
+  document.getElementById("answer").innerHTML =
+    number1 +
+    " ÷ " +
+    number2 +
+    " = " +
+    addedNumber +
+    " The remainder is " +
+    remainder;
 }
