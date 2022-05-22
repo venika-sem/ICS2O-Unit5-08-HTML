@@ -17,7 +17,6 @@ if (navigator.serviceWorker) {
 /**
  * This function does a division loop.
  */
-
 function myButtonClicked() {
   // input
   var firstInteger = document.getElementById("integer-one").value
