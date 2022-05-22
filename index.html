@@ -28,31 +28,29 @@
         </div>
       </header>
       <main class="mdl-layout__content">
-        <!-- First integer -->
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="number" step="1" pattern="-?[0-9]*(\.[0-9]+)?" id="first-integer">
-            <label class="mdl-textfield__label" for="first-integer">Enter the first integer:</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-        <!-- Second integer -->
-        <form action="#">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="number" step="1" pattern="-?[0-9]*(\.[0-9]+)?" id="second-integer">
-            <label class="mdl-textfield__label" for="second-integer">Enter the second integer:</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-        </form>
-        <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()">
-          Calculate
-        </button>
         <!-- basic text -->
-        <p></p>
-        <div id="answer"></div>
+        <h5>Input two integers you want to use <br>to divide </h5>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="number" step="1" pattern="-?[0-9]*(\.[0-9]+)?" id="integer-one" min="0">
+            <label class="mdl-textfield__label" for="integer-one">Input Integer</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Numeric Textfield -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="number" step="1" pattern="-?[0-9]*(\.[0-9]+)?" id="integer-two" min="0">
+            <label class="mdl-textfield__label" for="integer-two">Input Integer</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+        <!-- Colored raised button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="myButtonClicked()">
+          Click
+        </button>
+        <div id="loop"></div> 
       </main>
     </div>
   </body>
